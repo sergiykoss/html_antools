@@ -14,6 +14,7 @@ body {
     box-sizing: inherit;
 }
 
+
 li {
     list-style: none;
 }
@@ -32,7 +33,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .header__logo, 
@@ -40,6 +40,30 @@ a {
 .header__autorizatin {
     display: flex;
     align-items: center;
+}
+
+.header__list-items:hover .header__categories-list {
+    display: block;
+    color: #fff;
+    opacity: 1;
+}
+
+.header__categories-list {
+    position: absolute;
+    display: none;
+    top: 40px;
+    left: 577px;
+    padding-top: 20px;
+}
+.header__categories-item {
+    padding: 10px 50px 10px 0;
+    background-color: rgb(226, 226, 226);
+}
+
+.header__categories-item--link {
+    color: rgba(0, 0, 0, 0.55);
+    padding: 10px 50px 0 30px;
+    margin-left: 0px;
 }
 
 .header__logo h3 {
@@ -69,11 +93,14 @@ a {
 }
 
 .header__list-link:hover,
-.footer__info_block-list--item--link:hover {
-    color: rgba(255, 255, 255);
+.footer__info_block-list--item--link:hover,
+.header__list-link:hover path {
+    color: #fff;
+    stroke-opacity: 1;
 }
 
 .header__list-img {
+    margin-top: 3px;
     margin-left: 5px;
 }
 
@@ -373,7 +400,6 @@ input[type="search"] {
     color: rgba(255, 255, 255, 0.55);
     margin-right: 32px;
     transition: all .3s;
-    /* background-color: #171c2070; */
 }
 
 .tools__block-buttons--visit--link:hover,
@@ -387,6 +413,10 @@ input[type="search"] {
 .newcomer__block-buttons--social--item--link--img:hover {
     background-color: #283036;
     box-shadow: 0px 5px 10px 1px rgb(241, 89, 62);
+}
+
+.tools__block-buttons--social--item--link--img:hover path {
+    fill: #fd3b41;
 }
 
 .tools__btm {
@@ -422,6 +452,15 @@ input[type="search"] {
     max-width: 1224px;
 }
 
+.tools__brands path {
+    transition: all .3s;
+}
+
+.tools__brands:hover path {
+    fill: #fff;
+    fill-opacity: 1;
+}
+
 .tools__brands:hover {
     color: #FFFFFF;
     box-shadow: 0px 5px 10px 1px rgb(241, 89, 62);
@@ -443,10 +482,6 @@ input[type="search"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.tools__block-buttons--social--item--link--img path:hover {
-    fill: #fd3b41;
 }
 
 .newcomer__container {
